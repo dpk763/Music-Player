@@ -1,0 +1,177 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    height: 100vh;
+    background-color: #1d1d1d;
+}
+
+.music_container {
+    flex: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.list_container {
+    flex: 30%;
+    margin: 10px;
+}
+
+
+
+div.music_box {
+    width: 300px;
+    background-image: linear-gradient(to right, #b22a7c, #f56929);
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.info {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.img {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.img img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    animation-name: animate;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes animate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+
+        transform: rotate(360deg);
+    }
+
+}
+
+.slider {
+    display: flex;
+    justify-content: center;
+    padding: 0px 10px;
+}
+
+.slider input {
+    flex: 100%;
+    margin-top: 20px;
+}
+
+.time {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 15px;
+    color: white;
+    margin-bottom: 20px;
+}
+
+
+
+.controls {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.music_box .bi {
+    cursor: pointer;
+}
+
+.controls .buttons {
+    color: white;
+    font-size: 25px;
+}
+
+.bi-play-circle-fill,
+.bi-pause-circle-fill {
+    font-size: 50px;
+    color: white;
+}
+
+
+.item_box {
+    background-image: linear-gradient(to right, #b22a7c, #f56929);
+    overflow-y: auto;
+    height: 100%;
+    border-radius: 10px;
+    padding: 0px 5px;
+}
+
+.item_box::-webkit-scrollbar {
+    display: none;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+    padding: 0px 10px;
+    color: white;
+
+}
+
+.item img {
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.item i {
+    cursor: pointer;
+}
+
+.dark{
+    color: #1d1d1d;
+    font-size: 25px;
+
+}
+
+@media screen and (max-width:900px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .music_container {
+        margin: 20px 0px;
+    }
+
+    div.music_box{
+        width: 100%;
+        margin: 20px;
+    }
+
+    .list_container {
+        margin: 20px;
+    }
+
+    .img {
+        display: none;
+    }
+
+    .item_box{
+        height: 270px;
+    }
+}
